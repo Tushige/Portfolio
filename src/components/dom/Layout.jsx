@@ -2,6 +2,8 @@
 
 import { useRef } from 'react'
 import dynamic from 'next/dynamic'
+import AppHeader from '@/ui/AppHeader';
+
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false })
 
 const Layout = ({ children }) => {
@@ -18,6 +20,7 @@ const Layout = ({ children }) => {
         touchAction: 'auto',
       }}
     >
+      <AppHeader />
       {children}
       <Scene
         style={{

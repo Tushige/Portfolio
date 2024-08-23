@@ -1,33 +1,33 @@
 'use client'
 import ReactDOM from 'react-dom'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion } from "framer-motion"
 
 export function Overlay({ready}) {
   if (!ready) return null;
+  const pathname = usePathname()
   return (
-    <div style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
-      <a href="https://pmnd.rs/" style={{ position: 'absolute', bottom: 40, left: 90, fontSize: '13px' }}>
-        pmnd.rs
-        <br />
-        dev collective
-      </a>
-      {/* <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate3d(-50%,-50%,0)' }}> */}
+    <div className="px-4 lg:px-16">
       <div className="absolute left-[10%] top-[10%] flex flex-col">
         <div className="
           flex align-items-end p-0 m-0
-          text-[#5D8AA8] tracking-tight font-medium text-[5em] md:leading-none md:text-[20em]
+          text-fuchsia-900 tracking-tight font-medium sm:leading-none
+          text-[5em] sm:text-[8em] 2xl:text-[12em]
         ">
           <motion.h1
             initial={{x:-300, opacity: 0}}
             animate={{x:0, opacity: 1}}
             transition={{delay: 0, duration: 1}}
+            className=""
           >
             Hi!
           </motion.h1>
         </div>
         <div className="
           flex p-0 m-0 
-          text-[peru] font-black tracking-tight text-[3em] md:text-[10em] md:leading-none
+          text-[#fff] font-black tracking-tight sm:leading-none
+          text-[3em] sm:text-[6em] 2xl:text-[8em] 
         ">
           <motion.h2 
             initial={{ x: 300, opacity: 0 }}
@@ -39,8 +39,6 @@ export function Overlay({ready}) {
           </motion.h2>
         </div>
       </div>
-      <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>pretty bad —</div>
-      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>08/18/2024</div>
     </div>
   )
 }

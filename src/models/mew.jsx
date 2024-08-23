@@ -39,7 +39,7 @@ export function Mew({ isRotating, ...props }) {
         ref={group}
         {...props}
         position={[0, 0, 0.4]}
-        scale={[0.03, 0.03, 0.03]}
+        scale={[0.05, 0.05, 0.05]}
         rotation={[Math.PI / 6, Math.PI / 2, 0]}
         dispose={null}
       >
