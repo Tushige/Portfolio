@@ -19,7 +19,7 @@ export default function Page() {
         <div className="mx-auto max-w-screen-xl p-4 sm:p-16 md:max-w-7xl">
           <h1 className="text-2xl font-bold text-neutral-950 sm:text-5xl sm:leading-snug">
             Hi, I&apos;m
-            <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text font-semibold text-transparent drop-shadow">
+            <span className="bg-gradient-to-r ml-2 from-indigo-500 via-purple-500 to-pink-500 bg-clip-text font-semibold text-transparent drop-shadow lg:ml-4">
               Tushig<span className="text-black"> 🤝</span>
             </span>
           </h1>
