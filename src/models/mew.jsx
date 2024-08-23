@@ -8,7 +8,7 @@ Title: Mew - Flying
 */
 
 import React, { useRef, useEffect } from 'react'
-import { MathUtils } from 'THREE'
+import { MathUtils } from 'three'
 import { useFrame } from "@react-three/fiber"
 import { useGLTF, useAnimations } from '@react-three/drei'
 
