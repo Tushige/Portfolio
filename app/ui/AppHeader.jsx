@@ -18,20 +18,20 @@ const links = [
 export default function AppHeader() {
   const pathname = usePathname()
   return (
-    <header className="absolute top-0 w-full mx-auto z-[1]">
-      <div className="max-w-screen-xl md:max-w-7xl p-4 sm:p-16 mx-auto flex justify-between">
-        <nav className="flex gap-2 md:gap-8 justify-self-end">
+    <header className="absolute top-0 z-[1] mx-auto w-full">
+      <div className="mx-auto flex max-w-screen-xl justify-between p-4 sm:p-16 md:max-w-7xl">
+        <nav className="flex gap-2 justify-self-end md:gap-8">
           {
             links.map((link, i) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`flex items-center w-32 md:w-36 relative p-2 cursor-pointer rounded-t-md ${pathname === link.href && pathname !== '/' ? 'bg-white' : ''} ${pathname === '/' && 'text-white'}`}
+                className={`relative flex w-32 cursor-pointer items-center rounded-t-md p-2 ${pathname === link.href && pathname !== '/' ? 'bg-white' : ''} ${pathname === '/' && 'text-white'} md:w-36`}
               >
                 {link.icon} {link.label}
                 {
                   pathname === link.href ? (
-                    <motion.div className={`absolute bottom-[-2px] left-0 right-0 h-0.5 bg-[purple] ${pathname === '/' && 'bg-white'}`} layoutId="underline2" />
+                    <motion.div className={`absolute inset-x-0 bottom-[-2px] h-0.5 bg-[purple] ${pathname === '/' && 'bg-white'}`} layoutId="underline2" />
                   ) : null
                 }
               </Link>

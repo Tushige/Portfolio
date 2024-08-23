@@ -8,13 +8,13 @@ export function AppLoader({progress}) {
 
   return (
     <motion.div className="
-      absolute top-0 left-0 w-full h-full z-1
-      bg-fuchsia-900 
-      flex items-center justify-center"
+      absolute left-0 top-0 z-[1] flex
+      size-full 
+      items-center justify-center bg-fuchsia-900"
     >
-      <div className={`block w-[300px] h-[10px] md:w-[600px] md:h-[20px] bg-[#272727] relative rounded-md`}>
+      <div className={`relative block h-[10px]  w-[300px] rounded-md bg-[#272727] md:h-[20px] md:w-[600px]`}>
         <motion.div
-          className={`w-[300px] h-[10px] md:w-[600px] md:h-[20px] bg-white absolute top-0 left-0 rounded-md`}
+          className={`absolute left-0 top-0 h-[10px] w-[300px] rounded-md bg-white md:h-[20px] md:w-[600px]`}
           initial={{width: '0%'}}
           animate={{ width: '100%'}}
         >

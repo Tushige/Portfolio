@@ -1,35 +1,22 @@
 'use client'
 import { DefaultLoadingManager } from 'three'
 import React, { Suspense, useState, useEffect } from 'react';
-import dynamic from 'next/dynamic'
-// import Loader from './Loader';
-import { OrbitControls, PerspectiveCamera, Stars, useProgress } from '@react-three/drei'
-import { animated } from '@react-spring/web'
-import { useTransition, a } from '@react-spring/three'
-import { motion } from "framer-motion"
+// import dynamic from 'next/dynamic'
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import {
   Mew,
   PlanetEarth,
   Galaxy
 } from '@/models';
-import { Globals } from "@react-spring/shared";
 import { View } from '@/components/canvas/View'
-import { useWindowDimensions } from '@/hooks'
 import { AppLoader } from '@/components/AppLoader'
 import { AnimatedLayout } from '@/components/dom/AnimatedLayout'
 import { Overlay } from './Overlay'
 import styles from './Home.module.css'
 
-const SM_BREAK = 768;
-
 // const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
 //   ssr: false
 // })
-
-function Loader2() {
-  const { active, progress, errors, item, loaded, total } = useProgress()
-  return <Html center>{progress} % loaded</Html>
-}
 
 export default function Home() {
   const [isRotating, setIsRotating] = useState(false);
@@ -61,11 +48,11 @@ export default function Home() {
 
   return (
     <AnimatedLayout>
-      <section className="w-full h-screen relative">
+      <section className="relative h-screen w-full">
         <View
           onMouseDown={onMouseDown}
           onMouseUp={onMouseUp}
-          className={`w-full flex h-full w-full flex-col items-center justify-center ${styles.bg} ${isMouseDown ? 'cursor-grabbing' : 'cursor-grab'}`}
+          className={`flex size-full flex-col items-center justify-center ${styles.bg} ${isMouseDown ? 'cursor-grabbing' : 'cursor-grab'}`}
         >
           <PerspectiveCamera makeDefault position={[0, 0, 1]} fov={75}>
           </PerspectiveCamera>

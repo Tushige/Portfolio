@@ -3,7 +3,6 @@ import React from 'react';
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { usePathname } from 'next/navigation'
 
 const links = [
   {
@@ -25,15 +24,15 @@ const links = [
 ]
 export default function AppFooter() {
   return (
-    <footer className="relative bottom-0 w-full mx-auto z-[1] bg-white">
-      <div className="max-w-screen-xl md:max-w-7xl p-4 sm:p-16 mx-auto flex justify-center">
+    <footer className="relative bottom-0 z-[1] mx-auto w-full bg-white">
+      <div className="mx-auto flex max-w-screen-xl justify-center p-4 sm:p-16 md:max-w-7xl">
         <nav className="flex justify-center">
           {
             links.map((link, i) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`flex justify-center items-center w-24 md:w-36 relative p-2 cursor-pointer rounded-t-lg`}
+                className={`relative flex w-24 cursor-pointer items-center justify-center rounded-t-lg p-2 md:w-36`}
               >
                 <motion.div whileHover={{ scale: 1.4 }}>
                   <Image src={link.icon} width={36} height={36} alt='social link' />

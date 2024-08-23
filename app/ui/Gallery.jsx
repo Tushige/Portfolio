@@ -16,7 +16,7 @@ const INITIAL_CAMERA_POS = [0, 2, 30];
 export default function Gallery({ items }) {
   return (
     <View
-      className={`w-full flex h-full w-full flex-col items-center justify-center `}
+      className={`flex size-full flex-col items-center justify-center `}
     >
       <color attach="background" args={[TOP_COLOR]} />
       <fog attach="fog" args={[TOP_COLOR, 0, 15]} />
@@ -110,6 +110,7 @@ function Frame({ url, name, ...props }) {
           ref={itemRef}
           position={[0, 0, 0.7]}
           url={url}
+          alt="gallery image"
         />
       </mesh>
     </group>

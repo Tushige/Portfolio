@@ -8,18 +8,18 @@ import {
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import {Programmer} from '@/ui/programmer'
-import { SkillsTable} from '@/ui/SkillsTable'
+import { Programmer } from '@/ui/programmer'
+import { SkillsTable } from '@/ui/SkillsTable'
 import AppFooter from '@/ui/AppFooter'
 
 export default function Page() {
   return (
     <AnimatedLayout>
-      <section className="bg-[#F8F4FF] pt-32">
-        <div className="max-w-screen-xl md:max-w-7xl p-4 sm:p-16 mx-auto">
-          <h1 className="font-bold text-2xl sm:text-5xl sm:leading-snug text-neutral-950">
-            Hi, I'm{' '}
-              <span className="drop-shadow font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+      <section className="bg---color-magnolia pt-32">
+        <div className="mx-auto max-w-screen-xl p-4 sm:p-16 md:max-w-7xl">
+          <h1 className="text-2xl font-bold text-neutral-950 sm:text-5xl sm:leading-snug">
+            Hi, I&apos;tm
+            <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text font-semibold text-transparent drop-shadow">
               Tushig<span className="text-black"> 🤝</span>
             </span>
           </h1>
@@ -30,33 +30,33 @@ export default function Page() {
             </p>
           </div>
           <div className="my-12">
-            <h2 className="font-semibold text-xl sm:text-3xl relative text-neutral-950">
+            <h2 className="relative text-xl font-semibold text-neutral-950 sm:text-3xl">
               Skills.
             </h2>
           </div>
-          <div className="lg:flex lg:columns-2 mt-12">
+          <div className="mt-12 lg:flex lg:columns-2">
             <div className="basis-1/4">
               <Programmer />
             </div>
-            <div className="basis-full w-full">
+            <div className="w-full basis-full">
               <SkillsTable />
             </div>
           </div>
 
           <div className="my-12">
-            <h2 className="font-semibold text-xl sm:text-3xl relative text-neutral-950">
+            <h2 className="relative text-xl font-semibold text-neutral-950 sm:text-3xl">
               Work experience.
             </h2>
           </div>
-      
-          <div className="mt-12 mb-12 flex">
+
+          <div className="my-12 flex">
             <VerticalTimeline>
               {experiences.map((experience, i) => (
                 <VerticalTimelineElement
                   key={i}
                   date={experience.date}
                   icon={
-                    <div className="flex justify-center items-center">
+                    <div className="flex items-center justify-center">
                       <Image
                         src={experience.icon}
                         width={64}
@@ -67,25 +67,23 @@ export default function Page() {
                     </div>
                   }
                   iconStyle={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    overflow: 'hidden'
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    overflow: "hidden"
                   }}
                   contentStyle={{
                     borderBottom: "8px",
                     borderStyle: "solid",
                     borderBottomColor: experience.iconBg,
-                    boxShadow: 'none'
+                    boxShadow: "none"
                   }}
                 >
-                  <ul className="my-5 ml-5 space-y-5 list-disc ml-5 space-y-2">
-                    <h3 className="
-                      text-black font-semibold text-xl
-                    ">
+                  <ul className="my-5 ml-5 list-disc space-y-2">
+                    <h3 className="text-xl font-semibold text-black">
                       {experience.company_name}
                     </h3>
-                    <span className="text-medium">{experience.title}</span>
+                    <span className="text-neutral-400">{experience.title}</span>
                     {experience.descriptions.map((description, j) => (
                       <li key={j} className="text-sm font-normal text-slate-500">
                         {description}
@@ -96,7 +94,6 @@ export default function Page() {
               ))}
             </VerticalTimeline>
           </div>
-        {/* <hr /> */}
         </div>
         <AppFooter />
       </section>
