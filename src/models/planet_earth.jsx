@@ -7,7 +7,7 @@ Title: Planet Earth
 */
 'use client'
 import React, { useRef, useState } from 'react'
-import { MathUtils } from 'THREE'
+import { MathUtils } from 'three'
 import { useFrame } from "@react-three/fiber"
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { a, useSpring, config } from "@react-spring/three"
