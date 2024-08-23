@@ -18,7 +18,7 @@ export default function Page() {
       <section className="bg---color-magnolia pt-32">
         <div className="mx-auto max-w-screen-xl p-4 sm:p-16 md:max-w-7xl">
           <h1 className="text-2xl font-bold text-neutral-950 sm:text-5xl sm:leading-snug">
-            Hi, I&apos;tm
+            Hi, I&apos;m
             <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text font-semibold text-transparent drop-shadow">
               Tushig<span className="text-black"> 🤝</span>
             </span>
