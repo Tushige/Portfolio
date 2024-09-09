@@ -6,7 +6,7 @@ import { getScreenModifier, SM, MD, XSM } from '@/utils'
 import './programmer.css'
 
 export const Programmer = (props) => {
-  const { ref, inView, entry } = useInView({ delay: 300 });
+  const { ref, inView, entry } = useInView({ delay: 2000 });
   const [viewBoxWidth, setViewBoxWidth] = useState(400)
   const [viewBoxHeight, setViewBoxHeight] = useState(400)
   const { width, height } = useWindowDimensions()

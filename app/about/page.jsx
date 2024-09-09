@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { AnimatedLayout } from '@/components/dom/AnimatedLayout'
 import { experiences } from '@/data'
 import {
   VerticalTimeline,
@@ -11,6 +10,8 @@ import 'react-vertical-timeline-component/style.min.css';
 import { Programmer } from '@/ui/programmer'
 import { SkillsTable } from '@/ui/SkillsTable'
 import AppFooter from '@/ui/AppFooter'
+import { ProjectSection } from './projects';
+import { AnimatedLayout } from '@/components/dom/AnimatedLayout'
 
 export default function Page() {
   return (
@@ -19,7 +20,7 @@ export default function Page() {
         <div className="mx-auto max-w-screen-xl p-4 sm:p-16 md:max-w-7xl">
           <h1 className="text-2xl font-bold text-neutral-950 sm:text-5xl sm:leading-snug">
             Hi, I&apos;m
-            <span className="bg-gradient-to-r ml-2 from-indigo-500 via-purple-500 to-pink-500 bg-clip-text font-semibold text-transparent drop-shadow lg:ml-4">
+            <span className="ml-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text font-semibold text-transparent drop-shadow lg:ml-4">
               Tushig<span className="text-black"> 🤝</span>
             </span>
           </h1>
@@ -93,6 +94,14 @@ export default function Page() {
                 </VerticalTimelineElement>
               ))}
             </VerticalTimeline>
+          </div>
+          <div className="my-12">
+            <h2 className="relative text-xl font-semibold text-neutral-950 sm:text-3xl">
+              Projects
+            </h2>
+          </div>
+          <div>
+            <ProjectSection />
           </div>
         </div>
         <AppFooter />

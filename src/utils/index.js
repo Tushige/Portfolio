@@ -1,3 +1,6 @@
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
 export const SCREEN_MODIFIER_RES = {
   sm: 640,
   md: 768,
@@ -19,4 +22,8 @@ export function getScreenModifier(windowWidth) {
   if (windowWidth >= SCREEN_MODIFIER_RES.md) return MD
   if (windowWidth >= SCREEN_MODIFIER_RES.sm) return SM
   else return XSM
+}
+
+export function cn(...inputs) {
+  return twMerge(clsx(inputs));
 }

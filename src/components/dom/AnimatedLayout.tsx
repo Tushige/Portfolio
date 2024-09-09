@@ -1,4 +1,4 @@
-import { motion, AnimatePresence, stagger } from "framer-motion"
+import { motion } from "framer-motion"
 
 export const AnimatedLayout = ({ children }) => {
   return (
