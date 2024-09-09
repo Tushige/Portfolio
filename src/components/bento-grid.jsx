@@ -45,7 +45,7 @@ export const BentoGridItem = ({
         <ul className="flex flex-row flex-wrap gap-2">
           {
             list.map(item => (
-              <span className="rounded-lg border-transparent bg-fuchsia-100 p-1 text-[10px] text-neutral-900 hover:bg-fuchsia-200/80">{item}</span>
+              <span key={item} className="rounded-lg border-transparent bg-fuchsia-100 p-1 text-[10px] text-neutral-900 hover:bg-fuchsia-200/80">{item}</span>
             ))
           }
         </ul>
