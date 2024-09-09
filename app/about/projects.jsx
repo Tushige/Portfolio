@@ -19,18 +19,20 @@ const projects = [
       'Plaid'
     ],
     header: (
-      <Image
-        src="/Fincent-home.png"
-        width={506}
-        height={426}
-        alt="project fincent screenshot"
-        className="h-[250px] w-full"
-      />
+      <div className="h-[250px] w-full">
+        <Image
+          src="/Fincent-home.png"
+          width={506}
+          height={426}
+          alt="project fincent screenshot"
+          className="scale-105 transition-transform duration-200 hover:scale-100"
+        />
+      </div>
     ),
     footer: (
       <ul className="mt-2">
         <li className="">
-          <a href="https://fincent.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 px-2 text-[10px]">
+          <a href="https://fincent.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
             <GlobeAltIcon className="w-6" />
             <span>Website</span>
           </a>
