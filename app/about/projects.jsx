@@ -20,7 +20,7 @@ const projects = [
     ],
     header: (
       <Image
-        src="/fincent-home.png"
+        src="/Fincent-home.png"
         width={506}
         height={426}
         alt="project fincent screenshot"
