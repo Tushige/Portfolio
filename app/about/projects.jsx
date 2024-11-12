@@ -19,7 +19,7 @@ const projects = [
       'Plaid'
     ],
     header: (
-      <div className="h-[250px] w-full">
+      <div className="h-[250px] w-full overflow-hidden">
         <Image
           src="/Fincent-home.png"
           width={506}
@@ -39,11 +39,46 @@ const projects = [
         </li>
       </ul>
     )
+  },
+  {
+    title: 'CHAT-AI',
+    description: (
+      <div className="mb-2">
+        Developed a SaaS web application for small businesses to streamline customer engagement through AI-driven chatbots and real-time messaging. Enabled businesses to configure custom chatbots with tailored conversational flows, manage customer appointments, and create targeted email campaigns.
+      </div>
+    ),
+    skills: [
+      'Next.js',
+      'TailwindCSS',
+      'Shadcn UI',
+      'OpenAI'
+    ],
+    header: (
+      <div className="w-full overflow-hidden">
+        <Image
+          src="/chatbot.svg"
+          width={506}
+          height={426}
+          alt="project chatai screenshot"
+          className="scale-105 transition-transform duration-200 hover:scale-100"
+        />
+      </div>
+    ),
+    footer: (
+      <ul className="mt-2">
+        <li className="">
+          <a href="https://chatai-gen.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
+            <GlobeAltIcon className="w-6" />
+            <span>Website</span>
+          </a>
+        </li>
+      </ul>
+    )
   }
 ]
 export const ProjectSection = () => {
   return (
-    <BentoGrid className="">
+    <BentoGrid className="flex flex-col items-center gap-8 md:flex-row md:items-stretch">
       {
         projects.map(project => (
           <BentoGridItem

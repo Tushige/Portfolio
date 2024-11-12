@@ -1,4 +1,4 @@
-'use client'
+  'use client'
 import { Layout } from '@/components/dom/Layout'
 import { Inter } from 'next/font/google'
 import { AnimatePresence } from "framer-motion"
