@@ -32,9 +32,9 @@ const projects = [
     footer: (
       <ul className="mt-2">
         <li className="">
-          <a href="https://fincent.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
+          <a href="https://chatai-gen.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 bg-fuchsia-50 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
             <GlobeAltIcon className="w-6" />
-            <span>Website</span>
+            <span className="text-slate-950">Website</span>
           </a>
         </li>
       </ul>
@@ -67,9 +67,9 @@ const projects = [
     footer: (
       <ul className="mt-2">
         <li className="">
-          <a href="https://chatai-gen.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
+          <a href="https://chatai-gen.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 bg-fuchsia-50 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
             <GlobeAltIcon className="w-6" />
-            <span>Website</span>
+            <span className="text-slate-950">Website</span>
           </a>
         </li>
       </ul>
