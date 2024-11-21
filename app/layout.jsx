@@ -13,7 +13,7 @@ const inter = Inter({
 
 // Set the frameLoop mode globally
 Globals.assign({
-  frameLoop: "always",
+  frameLoop: "demand",
 });
 export default function RootLayout({ children }) {
   return (
