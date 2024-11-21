@@ -1,5 +1,7 @@
   'use client'
 import { Layout } from '@/components/dom/Layout'
+import { raf } from '@react-spring/rafz'
+
 import { Inter } from 'next/font/google'
 import { AnimatePresence } from "framer-motion"
 import '@/global.css'
@@ -9,6 +11,8 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
+// Set the frameLoop mode globally
+raf.frameLoop = 'demand';
 export default function RootLayout({ children }) {
   return (
     <html lang='en' className={`antialiased ${inter.variable}`}>
