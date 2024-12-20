@@ -74,11 +74,45 @@ const projects = [
         </li>
       </ul>
     )
-  }
+  },
+  {
+    title: 'ARCANE',
+    description: (
+      <div className="mb-2">
+        Designed and Developed a visually captivating promo website for Arcane. The Site was crafted with a modern, interactive design inspired by the aesthetic of award-winning websites on Awwwards, focusing on dynamic visuals to engage fans of the series.
+      </div>
+    ),
+    skills: [
+      'React',
+      'TailwindCSS',
+      'GSAP',
+    ],
+    header: (
+      <div className="w-full overflow-hidden">
+        <Image
+          src="/arcane-2.png"
+          width={506}
+          height={426}
+          alt="project chatai screenshot"
+          className="size-full scale-105 object-cover object-left transition-transform duration-200 hover:scale-100"
+        />
+      </div>
+    ),
+    footer: (
+      <ul className="mt-2">
+        <li className="">
+          <a href="https://arcane-tushige.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 bg-fuchsia-50 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
+            <GlobeAltIcon className="w-6" />
+            <span className="text-slate-950">Website</span>
+          </a>
+        </li>
+      </ul>
+    )
+  },
 ]
 export const ProjectSection = () => {
   return (
-    <BentoGrid className="flex flex-col items-center gap-8 md:flex-row md:items-stretch">
+    <BentoGrid className="flex flex-col items-center gap-8 lg:flex-row lg:items-stretch">
       {
         projects.map(project => (
           <BentoGridItem
