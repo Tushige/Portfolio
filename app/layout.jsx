@@ -1,33 +1,26 @@
-  'use client'
+import { Inter, Manrope } from 'next/font/google'
 import { Layout } from '@/components/dom/Layout'
-import { Globals } from "@react-spring/shared";
-
-import { Inter } from 'next/font/google'
-import { AnimatePresence } from "framer-motion"
 import '@/global.css'
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-display', display: 'swap' })
 
-// Set the frameLoop mode globally
-Globals.assign({
-  frameLoop: "demand",
-});
+export const metadata = {
+  title: 'Tushig Ochirkhuyag | Frontend Developer',
+  description:
+    'Frontend development and creative exploration. Selected work, experience and experiments by Tushig Ochirkhuyag, a frontend developer in Chicago.',
+  openGraph: {
+    title: 'Tushig Ochirkhuyag | Frontend Developer',
+    description: 'Thoughtful interfaces. Playful experiments. Explore my selected work.',
+    type: 'website',
+  },
+}
+
 export default function RootLayout({ children }) {
   return (
-    <html lang='en' className={`antialiased ${inter.variable}`}>
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
+    <html lang='en' className={`${inter.variable} ${manrope.variable}`}>
       <body>
-        {/* To avoid FOUT with styled-components wrap Layout with StyledComponentsRegistry https://beta.nextjs.org/docs/styling/css-in-js#styled-components */}
-        <AnimatePresence mode="wait">
-          <Layout>{children}</Layout>
-        </AnimatePresence>
+        <Layout>{children}</Layout>
       </body>
     </html>
   )

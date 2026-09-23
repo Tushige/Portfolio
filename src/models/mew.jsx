@@ -9,7 +9,7 @@ Title: Mew - Flying
 
 import React, { useRef, useEffect } from 'react'
 import { MathUtils } from 'three'
-import { useFrame } from "@react-three/fiber"
+import { useFrame } from '@react-three/fiber'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
 export function Mew({ isRotating, ...props }) {
@@ -18,17 +18,16 @@ export function Mew({ isRotating, ...props }) {
   const { scene, nodes, materials, animations } = useGLTF('/3d/mew_-_flying.glb')
   const { actions } = useAnimations(animations, group)
   useEffect(() => {
-    if (isRotating) {
-      actions['Take 001'].play();
-    } else {
-      actions['Take 001'].stop();
-    }
+    const action = actions['Take 001']
+    if (!action) return
+    action.play()
+    action.paused = !isRotating
   }, [actions, isRotating])
   useFrame(({ camera, clock }) => {
     /**
      * page load animation
      */
-    const t = clock.getElapsedTime();
+    const t = clock.getElapsedTime()
     outerRef.current.position.x = MathUtils.lerp(outerRef.current.position.x, 0, 0.05)
     outerRef.current.position.y = MathUtils.lerp(outerRef.current.position.y, 0, 0.05)
     outerRef.current.position.z = MathUtils.lerp(outerRef.current.position.z, 0, 0.05)
@@ -44,7 +43,7 @@ export function Mew({ isRotating, ...props }) {
         dispose={null}
       >
         <primitive object={scene} />
-      </mesh >
+      </mesh>
     </group>
   )
 }
