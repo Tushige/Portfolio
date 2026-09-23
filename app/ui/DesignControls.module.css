@@ -1,0 +1,88 @@
+.bar {
+  background: var(--control-bg, #eeeaf3);
+  color: var(--control-ink, #33293e);
+  border-bottom: 1px solid var(--control-line, #d8d0e0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px max(24px, calc((100vw - 1320px) / 2));
+  font-size: 12px;
+}
+.choices {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.label {
+  margin-right: 20px;
+  color: var(--control-muted, #6b6077);
+}
+.choices a {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 150ms;
+}
+.choices a:hover {
+  background: var(--control-hover, #ded6e8);
+}
+.choices a[aria-current] {
+  background: var(--control-ink, #33293e);
+  color: var(--control-bg, #eeeaf3);
+}
+.theme {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.theme svg {
+  width: 18px;
+  height: 18px;
+}
+.theme select {
+  min-height: 40px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 4px;
+  border: 0;
+}
+:global([data-theme='dark']) .bar {
+  --control-bg: #211d29;
+  --control-ink: #eae4f1;
+  --control-muted: #b8acc6;
+  --control-line: #3c3348;
+  --control-hover: #3b3148;
+  color-scheme: dark;
+}
+@media (max-width: 750px) {
+  .label {
+    display: none;
+  }
+  .bar {
+    padding: 6px 14px;
+    gap: 8px;
+  }
+  .choices a {
+    padding: 8px 10px;
+  }
+}
+@media (max-width: 420px) {
+  .bar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .choices {
+    justify-content: center;
+  }
+  .theme {
+    margin-inline: auto;
+  }
+}

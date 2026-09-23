@@ -13,6 +13,31 @@
 .portfolio * {
   min-width: 0;
 }
+:global([data-theme='dark']) .portfolio {
+  --paper: #17121f;
+  --tint: #292033;
+  --ink: #f4eefb;
+  --muted: #bcb0ca;
+  --accent: #ba91fc;
+  --line: #44364f;
+  --white: #211a2b;
+}
+:global([data-theme='dark']) .preview,
+:global([data-theme='dark']) .strikeVisual,
+:global([data-theme='dark']) .arcaneVisual {
+  background: #342642;
+}
+:global([data-theme='dark']) .previewCaption p {
+  color: #cfc0df;
+}
+:global([data-theme='dark']) .primaryButton,
+:global([data-theme='dark']) .contactButton {
+  color: #21122f;
+}
+:global([data-theme='dark']) .primaryButton:hover,
+:global([data-theme='dark']) .contactButton:hover {
+  background: #cbaafa;
+}
 .portfolio a {
   text-decoration: none;
 }

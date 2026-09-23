@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+html[data-theme='dark'] {
+  color-scheme: dark;
+}
+html[data-theme='dark'] body {
+  background: #17121f;
+  color: #f4eefb;
+}
+html[data-theme='dark'] :focus-visible {
+  outline-color: #c4a0ff;
+}
+
 @layer base {
   * {
     box-sizing: border-box;
