@@ -6,25 +6,29 @@ import {
 
 const projects = [
   {
-    title: 'Fincent',
+    title: "Strike Desk",
     description: (
       <div className="mb-2">
-        Designed and implemented a personal banking solution that integrates with your bank accounts, enabling seamless transactions for sending and receiving funds.
+        Strike Desk is a playful trading game where you turn fictional news into options trades, learning risk and reward across five market days with $1 million in fun money.
       </div>
     ),
     skills: [
-      'Next.js',
-      'TailwindCSS',
-      'Shadcn UI',
-      'Plaid'
+      "React",
+      "Typescript",
+      "Node",
+      "Tailwind CSS",
+      "WebSockets",
+      "AG Grid",
+      "Data Heavy UI Performance",
+      "Vitest"
     ],
     header: (
       <div className="h-[250px] w-full overflow-hidden">
         <Image
-          src="/Fincent-home.png"
+          src="/trading-desk.jpg"
           width={506}
           height={426}
-          alt="project fincent screenshot"
+          alt="project Strike Desk Logo"
           className="scale-105 transition-transform duration-200 hover:scale-100"
         />
       </div>
@@ -32,49 +36,84 @@ const projects = [
     footer: (
       <ul className="mt-2">
         <li className="">
-          <a href="https://fincent.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 bg-fuchsia-50 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
-            <GlobeAltIcon className="w-6" />
+          <a href="https://strike-desk.onrender.com/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 bg-fuchsia-50 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
+            <GlobeAltIcon className="w-6" />  
             <span className="text-slate-950">Website</span>
           </a>
         </li>
       </ul>
     )
   },
-  {
-    title: 'CHAT-AI',
-    description: (
-      <div className="mb-2">
-        Developed a SaaS web application for small businesses to streamline customer engagement through AI-driven chatbots and real-time messaging. Enabled businesses to configure custom chatbots with tailored conversational flows, manage customer appointments, and create targeted email campaigns.
-      </div>
-    ),
-    skills: [
-      'Next.js',
-      'TailwindCSS',
-      'Shadcn UI',
-      'OpenAI'
-    ],
-    header: (
-      <div className="w-full overflow-hidden">
-        <Image
-          src="/chatbot.svg"
-          width={506}
-          height={426}
-          alt="project chatai screenshot"
-          className="scale-105 transition-transform duration-200 hover:scale-100"
-        />
-      </div>
-    ),
-    footer: (
-      <ul className="mt-2">
-        <li className="">
-          <a href="https://chatai-gen.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 bg-fuchsia-50 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
-            <GlobeAltIcon className="w-6" />
-            <span className="text-slate-950">Website</span>
-          </a>
-        </li>
-      </ul>
-    )
-  },
+  // {
+  //   title: 'Fincent',
+  //   description: (
+  //     <div className="mb-2">
+  //       Designed and implemented a personal banking solution that integrates with your bank accounts, enabling seamless transactions for sending and receiving funds.
+  //     </div>
+  //   ),
+  //   skills: [
+  //     'Next.js',
+  //     'TailwindCSS',
+  //     'Shadcn UI',
+  //     'Plaid'
+  //   ],
+  //   header: (
+  //     <div className="h-[250px] w-full overflow-hidden">
+  //       <Image
+  //         src="/Fincent-home.png"
+  //         width={506}
+  //         height={426}
+  //         alt="project fincent screenshot"
+  //         className="scale-105 transition-transform duration-200 hover:scale-100"
+  //       />
+  //     </div>
+  //   ),
+  //   footer: (
+  //     <ul className="mt-2">
+  //       <li className="">
+  //         <a href="https://fincent.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 bg-fuchsia-50 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
+  //           <GlobeAltIcon className="w-6" />
+  //           <span className="text-slate-950">Website</span>
+  //         </a>
+  //       </li>
+  //     </ul>
+  //   )
+  // },
+  // {
+  //   title: 'CHAT-AI',
+  //   description: (
+  //     <div className="mb-2">
+  //       Developed a SaaS web application for small businesses to streamline customer engagement through AI-driven chatbots and real-time messaging. Enabled businesses to configure custom chatbots with tailored conversational flows, manage customer appointments, and create targeted email campaigns.
+  //     </div>
+  //   ),
+  //   skills: [
+  //     'Next.js',
+  //     'TailwindCSS',
+  //     'Shadcn UI',
+  //     'OpenAI'
+  //   ],
+  //   header: (
+  //     <div className="w-full overflow-hidden">
+  //       <Image
+  //         src="/chatbot.svg"
+  //         width={506}
+  //         height={426}
+  //         alt="project chatai screenshot"
+  //         className="scale-105 transition-transform duration-200 hover:scale-100"
+  //       />
+  //     </div>
+  //   ),
+  //   footer: (
+  //     <ul className="mt-2">
+  //       <li className="">
+  //         <a href="https://chatai-gen.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 bg-fuchsia-50 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
+  //           <GlobeAltIcon className="w-6" />
+  //           <span className="text-slate-950">Website</span>
+  //         </a>
+  //       </li>
+  //     </ul>
+  //   )
+  // },
   {
     title: 'ARCANE',
     description: (
