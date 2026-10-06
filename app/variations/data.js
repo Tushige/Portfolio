@@ -11,6 +11,18 @@ export const projects = [
     href: 'https://strike-desk.onrender.com/',
     action: 'Play the trading game',
   },
+    {
+    id: 'nfl-polymarket',
+    name: 'NFL Polymarket',
+    category: 'Real-time data',
+    image: '/projects/nfl-polymarket.png',
+    alt: 'Blue football helmet and ball beside a live odds panel showing prices for Chicago, Kansas City and Buffalo',
+    description:
+      'A live NFL betting-odds table that streams prices straight from Polymarket’s public WebSocket, with no backend in between.',
+    stack: 'React · TypeScript · WebSockets · Polymarket API',
+    href: 'https://polymarket-gamma-alpha.vercel.app/',
+    action: 'See the live odds',
+  },
   {
     id: 'arcane',
     name: 'Arcane',
@@ -35,22 +47,10 @@ export const projects = [
     href: '/playground',
     action: 'Enter the playground',
   },
-  {
-    id: 'nfl-polymarket',
-    name: 'NFL Polymarket',
-    category: 'Real-time data',
-    image: '/projects/nfl-polymarket.png',
-    alt: 'Blue football helmet and ball beside a live odds panel showing prices for Chicago, Kansas City and Buffalo',
-    description:
-      'A live NFL betting-odds table that streams prices straight from Polymarket’s public WebSocket, with no backend in between.',
-    stack: 'React · TypeScript · WebSockets · Polymarket API',
-    href: 'https://polymarket-gamma-alpha.vercel.app/',
-    action: 'See the live odds',
-  },
 ]
 export const socials = {
   github: 'https://github.com/Tushige',
-  linkedin: 'https://linkedin.com/in/tushig-ochirkhuyag-9a798a312',
+  linkedin: 'https://linkedin.com/in/tushig-ochirkhuyag',
   codepen: 'https://codepen.io/Ekut9119',
   soundcloud: 'https://soundcloud.com/tukekut',
 }

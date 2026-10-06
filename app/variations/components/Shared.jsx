@@ -74,7 +74,7 @@ export function About({ playful = false }) {
           )}
         </h2>
         <p>
-          I&apos;m Tushig Ochirkhuyag, a frontend developer based in Chicago. Over 7+ years, I&apos;ve worked on
+          I&apos;m Tushig Ochirkhuyag, a Software Engineer based in Chicago. Over 7+ years, I&apos;ve worked on
           products that help people navigate complex tasks, and experiments that invite them to explore.
         </p>
         <p>I enjoy the space where engineering, design and a little unexpected interaction meet.</p>

@@ -44,6 +44,40 @@ const projects = [
       </ul>
     )
   },
+    {
+    title: 'NFL Polymarket',
+    description: (
+      <div className="mb-2">
+        a live NFL betting-odds table built with React and TypeScript. It streams prices straight from Polymarket&apos;s public WebSocket with no backend
+      </div>
+    ),
+    skills: [
+      'React',
+      'WebSocket',
+      'Polymarket API',
+    ],
+    header: (
+      <div className="w-full overflow-hidden">
+        <Image
+          src="/projects/nfl-polymarket.png"
+          width={506}
+          height={426}
+          alt="project polymarket screenshot"
+          className="size-full scale-105 object-cover object-left transition-transform duration-200 hover:scale-100"
+        />
+      </div>
+    ),
+    footer: (
+      <ul className="mt-2">
+        <li className="">
+          <a href="https://polymarket-gamma-alpha.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 bg-fuchsia-50 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
+            <GlobeAltIcon className="w-6" />
+            <span className="text-slate-950">Website</span>
+          </a>
+        </li>
+      </ul>
+    )
+  },
   // {
   //   title: 'Fincent',
   //   description: (
@@ -141,40 +175,6 @@ const projects = [
       <ul className="mt-2">
         <li className="">
           <a href="https://arcane-tushige.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 bg-fuchsia-50 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
-            <GlobeAltIcon className="w-6" />
-            <span className="text-slate-950">Website</span>
-          </a>
-        </li>
-      </ul>
-    )
-  },
-    {
-    title: 'NFL Polymarket',
-    description: (
-      <div className="mb-2">
-        a live NFL betting-odds table built with React and TypeScript. It streams prices straight from Polymarket&apos;s public WebSocket with no backend
-      </div>
-    ),
-    skills: [
-      'React',
-      'WebSocket',
-      'Polymarket API',
-    ],
-    header: (
-      <div className="w-full overflow-hidden">
-        <Image
-          src="/projects/nfl-polymarket.png"
-          width={506}
-          height={426}
-          alt="project polymarket screenshot"
-          className="size-full scale-105 object-cover object-left transition-transform duration-200 hover:scale-100"
-        />
-      </div>
-    ),
-    footer: (
-      <ul className="mt-2">
-        <li className="">
-          <a href="https://polymarket-gamma-alpha.vercel.app/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 bg-fuchsia-50 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
             <GlobeAltIcon className="w-6" />
             <span className="text-slate-950">Website</span>
           </a>

@@ -5,7 +5,7 @@ import { experiences } from '@/data/work-experience'
 import ProjectSwitcher from './ProjectSwitcher'
 import styles from './Portfolio.module.css'
 
-const linkedin = 'https://linkedin.com/in/tushig-ochirkhuyag-9a798a312'
+const linkedin = 'https://linkedin.com/in/tushig-ochirkhuyag'
 const skills = [
   { title: 'Interfaces', items: 'React, Next.js, Vue, TypeScript, JavaScript, HTML & CSS' },
   { title: 'Behind the interface', items: 'Node.js, Express, MongoDB, GraphQL, WebSockets' },
@@ -54,7 +54,7 @@ export default function Portfolio() {
               <span>And play a little.</span>
             </h1>
             <p className={styles.introCopy}>
-              I&apos;m Tushig, a frontend developer in Chicago. I bring 7+ years of experience to useful products and
+              I&apos;m Tushig, a Software Engineer in Chicago. I bring 7+ years of experience to useful products and
               unexpected digital experiences.
             </p>
             <div className={styles.heroActions}>
@@ -271,7 +271,7 @@ export default function Portfolio() {
       <footer className={styles.footer}>
         <div>
           <strong>Tushig Ochirkhuyag</strong>
-          <p>Frontend developer. Curious builder.</p>
+          <p>Software Engineer. Curious builder.</p>
         </div>
         <nav aria-label='Social profiles'>
           <ExternalLink href='https://github.com/Tushige' className={styles.textLink}>

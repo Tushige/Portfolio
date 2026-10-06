@@ -14,7 +14,7 @@ const links = [
     icon: '/social_icons/codepen.svg'
   },
   {
-    href: 'https://linkedin.com/in/tushig-ochirkhuyag-9a798a312',
+    href: 'https://linkedin.com/in/tushig-ochirkhuyag',
     icon: '/social_icons/linkedin.svg'
   },
   {

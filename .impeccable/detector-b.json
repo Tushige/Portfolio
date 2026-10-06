@@ -1,0 +1,123 @@
+[
+  {
+    "antipattern": "gradient-text",
+    "name": "Gradient text",
+    "description": "Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\ochirkh2\\Documents\\Projects\\Portfolio\\app\\about\\page.jsx",
+    "line": 20,
+    "snippet": "bg-clip-text + bg-gradient"
+  },
+  {
+    "antipattern": "ai-color-palette",
+    "name": "AI color palette",
+    "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\ochirkh2\\Documents\\Projects\\Portfolio\\app\\about\\page.jsx",
+    "line": 20,
+    "snippet": "from-indigo-500 gradient"
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\ochirkh2\\Documents\\Projects\\Portfolio\\app\\ui\\programmer.css",
+    "line": 6,
+    "snippet": "cubic-bezier(.36, -0.01, .5, 1.38)",
+    "importedBy": [
+      "programmer.jsx"
+    ]
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\ochirkh2\\Documents\\Projects\\Portfolio\\app\\ui\\programmer.css",
+    "line": 11,
+    "snippet": "cubic-bezier(.36, -0.01, .5, 1.38)",
+    "importedBy": [
+      "programmer.jsx"
+    ]
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\ochirkh2\\Documents\\Projects\\Portfolio\\app\\ui\\programmer.css",
+    "line": 16,
+    "snippet": "cubic-bezier(.36, -0.01, .5, 1.38)",
+    "importedBy": [
+      "programmer.jsx"
+    ]
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\ochirkh2\\Documents\\Projects\\Portfolio\\app\\ui\\programmer.css",
+    "line": 21,
+    "snippet": "cubic-bezier(.36, -0.01, .5, 1.38)",
+    "importedBy": [
+      "programmer.jsx"
+    ]
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\ochirkh2\\Documents\\Projects\\Portfolio\\app\\ui\\programmer.css",
+    "line": 26,
+    "snippet": "cubic-bezier(.36, -0.01, .5, 1.38)",
+    "importedBy": [
+      "programmer.jsx"
+    ]
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\ochirkh2\\Documents\\Projects\\Portfolio\\app\\ui\\programmer.css",
+    "line": 31,
+    "snippet": "cubic-bezier(.36, -0.01, .5, 1.38)",
+    "importedBy": [
+      "programmer.jsx"
+    ]
+  },
+  {
+    "antipattern": "bounce-easing",
+    "name": "Bounce or elastic easing",
+    "description": "Bounce and elastic easing feel dated and tacky. Real objects decelerate smoothly — use exponential easing (ease-out-quart/quint/expo) instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\ochirkh2\\Documents\\Projects\\Portfolio\\app\\ui\\programmer.css",
+    "line": 36,
+    "snippet": "cubic-bezier(.36, -0.01, .5, 1.38)",
+    "importedBy": [
+      "programmer.jsx"
+    ]
+  },
+  {
+    "antipattern": "gray-on-color",
+    "name": "Gray text on colored background",
+    "description": "Gray text looks washed out on colored backgrounds. Use a darker shade of the background color instead, or white/near-white for contrast.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\ochirkh2\\Documents\\Projects\\Portfolio\\src\\components\\bento-grid.jsx",
+    "line": 53,
+    "snippet": "text-neutral-900 on bg-fuchsia-100"
+  }
+]

@@ -19,7 +19,7 @@ export default function Studio() {
             </h1>
             <div className={styles.heroBaseline}>
               <p>
-                I&apos;m Tushig, a frontend developer in Chicago.
+                I&apos;m Tushig, a Software Engineer in Chicago.
                 <br />I build useful products and unexpected experiences.
               </p>
               <a href='#work'>

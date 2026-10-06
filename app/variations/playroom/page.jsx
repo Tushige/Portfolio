@@ -17,7 +17,7 @@ export default function Playroom() {
               <span>a little play.</span>
             </h1>
             <p>
-              I&apos;m Tushig. Frontend developer, curious builder.
+              I&apos;m Tushig. Software Engineer, curious builder.
               <br />
               Making things that work beautifully. And sometimes surprise you.
             </p>

@@ -21,7 +21,7 @@ export default function Index() {
               <p>
                 Tushig Ochirkhuyag
                 <br />
-                <span>Frontend developer · Chicago</span>
+                <span>Software Engineer · Chicago</span>
               </p>
               <p>7+ years connecting product thinking, thoughtful engineering and creative exploration.</p>
               <a href='#about' className={styles.textAction}>
@@ -32,7 +32,6 @@ export default function Index() {
           <section id='work' className={styles.indexWork} aria-labelledby='work-heading'>
             <div className={styles.indexSectionHead}>
               <h2 id='work-heading'>Selected work</h2>
-              <p>Choose a project to take a closer look.</p>
             </div>
             <ProjectIndex />
           </section>

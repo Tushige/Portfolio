@@ -9,11 +9,11 @@ const manrope = Manrope({ subsets: ['latin'], variable: '--font-display', displa
 const space = Space_Grotesk({ subsets: ['latin'], variable: '--font-play', display: 'swap' })
 
 export const metadata = {
-  title: 'Tushig Ochirkhuyag | Frontend Developer',
+  title: 'Tushig Ochirkhuyag | Software Engineer',
   description:
-    'Frontend development and creative exploration. Selected work, experience and experiments by Tushig Ochirkhuyag, a frontend developer in Chicago.',
+    'Frontend development and creative exploration. Selected work, experience and experiments by Tushig Ochirkhuyag, a Software Engineer in Chicago.',
   openGraph: {
-    title: 'Tushig Ochirkhuyag | Frontend Developer',
+    title: 'Tushig Ochirkhuyag | Software Engineer',
     description: 'Thoughtful interfaces. Playful experiments. Explore my selected work.',
     type: 'website',
   },

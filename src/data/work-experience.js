@@ -29,7 +29,7 @@ export const experiences = [
     iconBg: '#00819d',
     date: 'January 2020 - October 2021',
     descriptions: [
-      `Served as sole frontend developer for a SoFi Stadium fan experience platform, delivering scoreboards, AR photo purchases, and Angular iPad check-in workflows with scanner integration; partnered with design and backend teams through launch.`,
+      `Served as sole Software Engineer for a SoFi Stadium fan experience platform, delivering scoreboards, AR photo purchases, and Angular iPad check-in workflows with scanner integration; partnered with design and backend teams through launch.`,
     ],
   },
   {

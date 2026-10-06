@@ -1,0 +1,212 @@
+{
+  "layouts": [
+    {
+      "route": "studio",
+      "viewport": "desktop",
+      "mode": "light",
+      "brokenImages": 0,
+      "h1": "Built with intent.\nRoom for wonder.",
+      "scrollWidth": 1265,
+      "theme": "light",
+      "width": 1280
+    },
+    {
+      "route": "studio",
+      "viewport": "desktop",
+      "mode": "dark",
+      "brokenImages": 0,
+      "h1": "Built with intent.\nRoom for wonder.",
+      "scrollWidth": 1265,
+      "theme": "dark",
+      "width": 1265
+    },
+    {
+      "route": "index",
+      "viewport": "desktop",
+      "mode": "light",
+      "brokenImages": 0,
+      "h1": "Good interfaces.\nInteresting possibilities.",
+      "scrollWidth": 1265,
+      "theme": "light",
+      "width": 1280
+    },
+    {
+      "route": "index",
+      "viewport": "desktop",
+      "mode": "dark",
+      "brokenImages": 0,
+      "h1": "Good interfaces.\nInteresting possibilities.",
+      "scrollWidth": 1265,
+      "theme": "dark",
+      "width": 1265
+    },
+    {
+      "route": "playroom",
+      "viewport": "desktop",
+      "mode": "light",
+      "brokenImages": 0,
+      "h1": "Serious about\na little play.",
+      "scrollWidth": 1265,
+      "theme": "light",
+      "width": 1280
+    },
+    {
+      "route": "playroom",
+      "viewport": "desktop",
+      "mode": "dark",
+      "brokenImages": 0,
+      "h1": "Serious about\na little play.",
+      "scrollWidth": 1265,
+      "theme": "dark",
+      "width": 1280
+    },
+    {
+      "route": "original",
+      "viewport": "desktop",
+      "mode": "light",
+      "brokenImages": 0,
+      "h1": "Interfaces that\nwork hard.\nAnd play a little.",
+      "scrollWidth": 1265,
+      "theme": "light",
+      "width": 1280
+    },
+    {
+      "route": "original",
+      "viewport": "desktop",
+      "mode": "dark",
+      "brokenImages": 0,
+      "h1": "Interfaces that\nwork hard.\nAnd play a little.",
+      "scrollWidth": 1265,
+      "theme": "dark",
+      "width": 1280
+    },
+    {
+      "route": "studio",
+      "viewport": "mobile",
+      "mode": "light",
+      "brokenImages": 0,
+      "scrollWidth": 390,
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "route": "studio",
+      "viewport": "mobile",
+      "mode": "dark",
+      "brokenImages": 0,
+      "scrollWidth": 390,
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "route": "index",
+      "viewport": "mobile",
+      "mode": "light",
+      "brokenImages": 0,
+      "scrollWidth": 390,
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "route": "index",
+      "viewport": "mobile",
+      "mode": "dark",
+      "brokenImages": 0,
+      "scrollWidth": 390,
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "route": "playroom",
+      "viewport": "mobile",
+      "mode": "light",
+      "brokenImages": 0,
+      "scrollWidth": 390,
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "route": "playroom",
+      "viewport": "mobile",
+      "mode": "dark",
+      "brokenImages": 0,
+      "scrollWidth": 390,
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "route": "original",
+      "viewport": "mobile",
+      "mode": "light",
+      "brokenImages": 0,
+      "scrollWidth": 390,
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "route": "original",
+      "viewport": "mobile",
+      "mode": "dark",
+      "brokenImages": 0,
+      "scrollWidth": 390,
+      "theme": "dark",
+      "width": 390
+    }
+  ],
+  "textContrast": [
+    {
+      "route": "studio",
+      "mode": "light",
+      "failures": []
+    },
+    {
+      "route": "studio",
+      "mode": "dark",
+      "failures": []
+    },
+    {
+      "route": "index",
+      "mode": "light",
+      "failures": []
+    },
+    {
+      "route": "index",
+      "mode": "dark",
+      "failures": [],
+      "settledSelectionRatios": {
+        "project": 14.64,
+        "comparison": 13.25
+      },
+      "note": "Initial sampling caught an intermediate 150ms state transition; settled colors were read separately and pass."
+    },
+    {
+      "route": "playroom",
+      "mode": "light",
+      "failures": []
+    },
+    {
+      "route": "playroom",
+      "mode": "dark",
+      "failures": []
+    },
+    {
+      "route": "original",
+      "mode": "light",
+      "failures": []
+    },
+    {
+      "route": "original",
+      "mode": "dark",
+      "failures": []
+    }
+  ],
+  "interactionChecks": [
+    "Index selection using Enter and pointer passed",
+    "Playroom next/previous using Enter and pointer passed",
+    "Appearance persisted across route link navigation and reload",
+    "No runtime console warnings/errors during checks",
+    "Humana experience disclosure toggled with Enter",
+    "System appearance matches operating system preference"
+  ],
+  "reducedMotion": "CSS rules inspected; browser emulation unavailable in current capability set"
+}
