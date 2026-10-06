@@ -48,3 +48,8 @@ html[data-theme='dark'] :focus-visible {
     }
   }
 }
+
+/* Native smooth scrolling fights Lenis, which sets the scroll position every frame. */
+html.lenis {
+  scroll-behavior: auto;
+}

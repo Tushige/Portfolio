@@ -318,13 +318,13 @@ Native `details` and `summary` elements display company, role and date, with a t
 
 ### Navigation and motion
 
-Portfolio navigation is in normal document flow and links to work, about, the playground and contact. The page uses smooth anchor scrolling with 100px scroll padding; reduced motion changes scrolling to automatic. Reduced motion also removes portfolio animations and transitions and disables hover displacement. The image swap has a 0.3-second ease-out opacity/scale entrance only when reduced motion is not requested.
+Portfolio navigation is in normal document flow and links to work, about, the playground and contact. Portfolio routes use Lenis smooth scrolling, including anchor links, which honor the 100px scroll padding; reduced motion makes scrolling track input directly. The 3D routes keep native scrolling. Reduced motion also removes portfolio animations and transitions and disables hover displacement. The image swap has a 0.3-second ease-out opacity/scale entrance only when reduced motion is not requested.
 
 The playground shows a poster by default when reduced motion is requested and offers an explicit start action. Otherwise it offers pause/resume controls for scene rotation. Loading and scene-error messages use status semantics, with a poster on a reported scene-loading error. Dragging the 3D scene is a pointer interaction; these behaviors are implementation evidence, not a claim of comprehensive accessibility certification.
 
 ### Comparison navigation and appearance
 
-Original, Studio, Index and Playroom are normal route links with aria-current. A labeled native select offers System, Light and Dark. System is the first-visit default, follows operating-system changes, and shares the portfolio-theme preference in local storage across comparison routes. The early head script resolves the saved preference before paint; storage failures fall back to the system preference on startup. The comparison bar appears only on the original and comparison routes.
+Index (live), Studio, Playroom and Original are normal route links with aria-current. A light/dark switch (role switch, labeled Dark mode) toggles the theme and stores the portfolio-theme preference in local storage. Until the visitor toggles, the theme follows the operating system, including later changes. The early head script resolves the saved preference before paint, and the switch's position is driven by data-theme so it is correct before hydration; storage failures fall back to the system preference on startup. The design links appear only on /variations routes; the live homepage shows the switch alone.
 
 ### Interactive work selection
 

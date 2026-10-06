@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { SunIcon, MoonIcon, ComputerDesktopIcon } from '@heroicons/react/24/outline'
+import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 import styles from './DesignControls.module.css'
 
 export const designs = [
@@ -15,35 +15,40 @@ export const designs = [
 
 export default function DesignControls() {
   const pathname = usePathname()
-  const [preference, setPreference] = useState('system')
+  // The head script in layout.jsx sets data-theme before paint; this mirrors it for the switch state.
+  const [dark, setDark] = useState(false)
 
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem('portfolio-theme')
-      if (['light', 'dark', 'system'].includes(saved)) setPreference(saved)
-    } catch {}
-  }, [])
-
-  useEffect(() => {
+    const root = document.documentElement
+    setDark(root.dataset.theme === 'dark')
+    // Until the visitor picks a theme, keep following the operating system.
     const system = window.matchMedia('(prefers-color-scheme: dark)')
-    const apply = () => {
-      // Read storage here too so the initial effect cannot overwrite the pre-paint theme.
-      let mode = preference
+    const follow = () => {
+      let saved = null
       try {
-        mode = localStorage.getItem('portfolio-theme') || preference
+        saved = localStorage.getItem('portfolio-theme')
       } catch {}
-      document.documentElement.dataset.theme = mode === 'system' ? (system.matches ? 'dark' : 'light') : mode
+      if (saved === 'light' || saved === 'dark') return
+      root.dataset.theme = system.matches ? 'dark' : 'light'
+      setDark(system.matches)
     }
-    apply()
-    system.addEventListener('change', apply)
-    return () => system.removeEventListener('change', apply)
-  }, [preference])
+    system.addEventListener('change', follow)
+    return () => system.removeEventListener('change', follow)
+  }, [])
 
   if (pathname !== '/' && !pathname.startsWith('/variations')) return null
   // The live homepage only gets the appearance toggle; the design switcher is for comparing on /variations.
   const showDesigns = pathname.startsWith('/variations')
 
-  const Icon = preference === 'dark' ? MoonIcon : preference === 'light' ? SunIcon : ComputerDesktopIcon
+  const toggle = () => {
+    const mode = dark ? 'light' : 'dark'
+    try {
+      localStorage.setItem('portfolio-theme', mode)
+    } catch {}
+    document.documentElement.dataset.theme = mode
+    setDark(!dark)
+  }
+
   return (
     <aside className={styles.bar} aria-label={showDesigns ? 'Design comparison and appearance' : 'Appearance'}>
       {showDesigns && (
@@ -56,26 +61,20 @@ export default function DesignControls() {
           ))}
         </nav>
       )}
-      <label className={styles.theme}>
-        <Icon aria-hidden='true' />
-        <span className='sr-only'>Appearance</span>
-        <select
-          value={preference}
-          onChange={(event) => {
-            const mode = event.target.value
-            try {
-              localStorage.setItem('portfolio-theme', mode)
-            } catch {}
-            document.documentElement.dataset.theme =
-              mode === 'system' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : mode
-            setPreference(mode)
-          }}
-        >
-          <option value='system'>System</option>
-          <option value='light'>Light</option>
-          <option value='dark'>Dark</option>
-        </select>
-      </label>
+      <button
+        type='button'
+        role='switch'
+        aria-checked={dark}
+        aria-label='Dark mode'
+        className={styles.theme}
+        onClick={toggle}
+      >
+        <SunIcon aria-hidden='true' />
+        <span className={styles.track} aria-hidden='true'>
+          <span className={styles.thumb} />
+        </span>
+        <MoonIcon aria-hidden='true' />
+      </button>
     </aside>
   )
 }

@@ -1,6 +1,7 @@
 import { Inter, Manrope, Space_Grotesk } from 'next/font/google'
 import { Layout } from '@/components/dom/Layout'
 import DesignControls from '@/ui/DesignControls'
+import SmoothScroll from '@/ui/SmoothScroll'
 import '@/global.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <SmoothScroll />
         <DesignControls />
         <Layout>{children}</Layout>
       </body>
