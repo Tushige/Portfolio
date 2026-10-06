@@ -7,10 +7,10 @@ import { SunIcon, MoonIcon, ComputerDesktopIcon } from '@heroicons/react/24/outl
 import styles from './DesignControls.module.css'
 
 export const designs = [
-  { href: '/', name: 'Original' },
+  { href: '/', name: 'Index (live)' },
   { href: '/variations/studio', name: 'Studio' },
-  { href: '/variations/index', name: 'Index' },
   { href: '/variations/playroom', name: 'Playroom' },
+  { href: '/variations/original', name: 'Original' },
 ]
 
 export default function DesignControls() {
@@ -40,18 +40,22 @@ export default function DesignControls() {
   }, [preference])
 
   if (pathname !== '/' && !pathname.startsWith('/variations')) return null
+  // Visitors to the live homepage only get the appearance toggle; the design switcher shows on /variations and in dev.
+  const showDesigns = pathname.startsWith('/variations') || process.env.NODE_ENV !== 'production'
 
   const Icon = preference === 'dark' ? MoonIcon : preference === 'light' ? SunIcon : ComputerDesktopIcon
   return (
-    <aside className={styles.bar} aria-label='Design comparison and appearance'>
-      <nav className={styles.choices} aria-label='Compare portfolio designs'>
-        <span className={styles.label}>Explore the designs</span>
-        {designs.map((design) => (
-          <Link key={design.href} href={design.href} aria-current={pathname === design.href ? 'page' : undefined}>
-            {design.name}
-          </Link>
-        ))}
-      </nav>
+    <aside className={styles.bar} aria-label={showDesigns ? 'Design comparison and appearance' : 'Appearance'}>
+      {showDesigns && (
+        <nav className={styles.choices} aria-label='Compare portfolio designs'>
+          <span className={styles.label}>Explore the designs</span>
+          {designs.map((design) => (
+            <Link key={design.href} href={design.href} aria-current={pathname === design.href ? 'page' : undefined}>
+              {design.name}
+            </Link>
+          ))}
+        </nav>
+      )}
       <label className={styles.theme}>
         <Icon aria-hidden='true' />
         <span className='sr-only'>Appearance</span>

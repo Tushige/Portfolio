@@ -33,7 +33,11 @@ export function Header({ variant }) {
         Skip to content
       </a>
       <header className={styles.header}>
-        <Link href={`/variations/${variant}`} className={styles.wordmark} aria-label='Tushig Ochirkhuyag home'>
+        <Link
+          href={variant === 'index' ? '/' : `/variations/${variant}`}
+          className={styles.wordmark}
+          aria-label='Tushig Ochirkhuyag home'
+        >
           tushig<span>.</span>
         </Link>
         <nav aria-label='Main navigation'>
