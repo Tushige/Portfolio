@@ -13,7 +13,14 @@ export default function ProjectDeck() {
     <div className={styles.deck}>
       <div className={styles.deckStage} role='group' aria-label='Choose a project from the gallery'>
         {projects.map((item, index) => {
-          const position = index === selected ? 'center' : index === (selected + 1) % projects.length ? 'right' : 'left'
+          const position =
+            index === selected
+              ? 'center'
+              : index === (selected + 1) % projects.length
+                ? 'right'
+                : index === (selected + projects.length - 1) % projects.length
+                  ? 'left'
+                  : 'hidden'
           return (
             <button
               key={item.id}

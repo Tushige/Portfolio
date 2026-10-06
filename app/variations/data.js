@@ -35,6 +35,18 @@ export const projects = [
     href: '/playground',
     action: 'Enter the playground',
   },
+  {
+    id: 'nfl-polymarket',
+    name: 'NFL Polymarket',
+    category: 'Real-time data',
+    image: '/projects/nfl-polymarket.png',
+    alt: 'Blue football helmet and ball beside a live odds panel showing prices for Chicago, Kansas City and Buffalo',
+    description:
+      'A live NFL betting-odds table that streams prices straight from Polymarket’s public WebSocket, with no backend in between.',
+    stack: 'React · TypeScript · WebSockets · Polymarket API',
+    href: 'https://polymarket-gamma-alpha.vercel.app/',
+    action: 'See the live odds',
+  },
 ]
 export const socials = {
   github: 'https://github.com/Tushige',

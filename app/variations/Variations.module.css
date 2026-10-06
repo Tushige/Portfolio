@@ -673,6 +673,10 @@
   background: #f5c6aa;
   color: #4d2c24;
 }
+.deckCard:nth-child(4) {
+  background: #e0c3f5;
+  color: #372348;
+}
 .deckCard[data-position='center'] {
   z-index: 3;
   transform: translateY(0) rotate(-2deg);
@@ -684,6 +688,11 @@
 .deckCard[data-position='right'] {
   z-index: 2;
   transform: translate(29%, 16px) rotate(12deg) scale(0.81);
+}
+.deckCard[data-position='hidden'] {
+  z-index: 0;
+  visibility: hidden;
+  transform: translateY(24px) scale(0.7);
 }
 .deckCard:focus-visible {
   z-index: 4;
@@ -841,6 +850,9 @@
 }
 :global([data-theme='dark']) .playroom .deckCard:nth-child(3) {
   background: #dfb090;
+}
+:global([data-theme='dark']) .playroom .deckCard:nth-child(4) {
+  background: #c4a2dc;
 }
 
 @media (prefers-reduced-motion: no-preference) {

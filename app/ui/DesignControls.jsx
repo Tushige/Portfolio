@@ -7,7 +7,7 @@ import { SunIcon, MoonIcon, ComputerDesktopIcon } from '@heroicons/react/24/outl
 import styles from './DesignControls.module.css'
 
 export const designs = [
-  { href: '/', name: 'Index (live)' },
+  { href: '/variations/index', name: 'Index (live)' },
   { href: '/variations/studio', name: 'Studio' },
   { href: '/variations/playroom', name: 'Playroom' },
   { href: '/variations/original', name: 'Original' },
@@ -40,8 +40,8 @@ export default function DesignControls() {
   }, [preference])
 
   if (pathname !== '/' && !pathname.startsWith('/variations')) return null
-  // Visitors to the live homepage only get the appearance toggle; the design switcher shows on /variations and in dev.
-  const showDesigns = pathname.startsWith('/variations') || process.env.NODE_ENV !== 'production'
+  // The live homepage only gets the appearance toggle; the design switcher is for comparing on /variations.
+  const showDesigns = pathname.startsWith('/variations')
 
   const Icon = preference === 'dark' ? MoonIcon : preference === 'light' ? SunIcon : ComputerDesktopIcon
   return (
