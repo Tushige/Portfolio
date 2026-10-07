@@ -36,7 +36,7 @@ const projects = [
     footer: (
       <ul className="mt-2">
         <li className="">
-          <a href="https://strike-desk.onrender.com/" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 bg-fuchsia-50 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
+          <a href="https://pupside.app" className="inline-flex cursor-pointer flex-row items-center gap-2 rounded-lg border border-fuchsia-200 bg-fuchsia-50 px-2 text-[10px] hover:bg-fuchsia-700 hover:text-white">
             <GlobeAltIcon className="w-6" />  
             <span className="text-slate-950">Website</span>
           </a>

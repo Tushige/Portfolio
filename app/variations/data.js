@@ -1,14 +1,14 @@
 export const projects = [
   {
     id: 'strike-desk',
-    name: 'Strike Desk',
+    name: 'Pupside',
     category: 'Product engineering',
     image: '/projects/strike-desk.webp',
     alt: 'Strike Desk trading interface with a live price chart, market watch and order ticket',
     description:
       'Five market days. Fictional news. A million in pretend money. A trading game that makes a complex interface feel approachable.',
     stack: 'React · TypeScript · WebSockets · AG Grid · Node.js',
-    href: 'https://strike-desk.onrender.com/',
+    href: 'https://pupside.app/',
     action: 'Play the trading game',
   },
     {

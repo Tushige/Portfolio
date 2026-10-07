@@ -79,7 +79,7 @@ export default function Portfolio() {
           </div>
           <article id='strike-desk' className={styles.project}>
             <a
-              href='https://strike-desk.onrender.com/'
+              href='https://pupside.app/'
               target='_blank'
               rel='noopener noreferrer'
               className={`${styles.projectVisual} ${styles.strikeVisual}`}
@@ -97,7 +97,7 @@ export default function Portfolio() {
               </span>
             </a>
             <div className={styles.projectCopy}>
-              <h3>Strike Desk</h3>
+              <h3>Pupside</h3>
               <p>
                 Five market days. Fictional news. One million in pretend money. A trading game that turns risk and
                 reward into decisions you can learn from.
@@ -115,7 +115,7 @@ export default function Portfolio() {
                   <dd>React and TypeScript interfaces, WebSockets, AG Grid and a Node.js backend.</dd>
                 </div>
               </dl>
-              <ExternalLink href='https://strike-desk.onrender.com/' className={styles.textLink}>
+              <ExternalLink href='https://pupside.app/' className={styles.textLink}>
                 Play the game
               </ExternalLink>
             </div>
