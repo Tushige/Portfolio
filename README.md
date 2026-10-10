@@ -4,11 +4,19 @@ A Next.js portfolio balancing frontend engineering and creative exploration.
 
 ## Run locally
 
-Install the dependencies with pnpm, then run `pnpm dev`.
+Use Node.js 22 or newer and pnpm 12.5.1 (the version pinned in `package.json`). Install the dependencies with `pnpm install`, then run `pnpm dev`.
 
 For a production preview, stop the development server before running `pnpm build`, then run `pnpm start`. Next.js development and production builds share the `.next` directory, so do not run a build while the development server is compiling.
 
 To run an isolated production preview alongside development, set `PORTFOLIO_DIST_DIR=.next-preview` for both the build and start processes and choose a free port (for example `pnpm start --port 3002`).
+
+## Deploy to Railway
+
+Connect the GitHub repository to a Railway service with the repository root as its root directory. Set the build command to `pnpm build` and the start command to `pnpm start --hostname 0.0.0.0 --port $PORT`. Enter `$PORT` literally in Railway; Railway supplies its value. Leave `PORTFOLIO_DIST_DIR` unset to use `.next`.
+
+After deployment, open Settings → Networking → Public Networking and select Generate Domain. The portfolio does not require a database or API secrets.
+
+Commit `pnpm-lock.yaml` and use pnpm for dependency updates. The Next.js 15 security update requires React 19 and React Three Fiber 9 for the 3D routes. The PostCSS override in `pnpm-workspace.yaml` replaces Next.js's older pinned version with a patched PostCSS 8 release.
 
 ## Pages
 
